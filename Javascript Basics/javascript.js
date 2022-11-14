@@ -1,4 +1,5 @@
 // https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
+console.log("\n\n====== Foundations Part 1 ======\n")
 console.log("Hello world!");
 let name = "John";
 let admin = name;
@@ -62,13 +63,15 @@ console.log(percentage);
 
 // https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
 
+console.log("\n\n====== Foundations Part 2 ======\n")
+
 console.log( '2' > 1 ); // true, string '2' becomes a number 2
 console.log( '01' == 1 ); // true, string '01' becomes a number 1
 console.log( true == 1 ); // true
 console.log( false == 0 ); // true
 
 // https://www.theodinproject.com/lessons/foundations-fundamentals-part-3
-
+console.log("\n\n====== Foundations Part 3 ======\n")
 function add7(x) {
     return x+7;
 };
@@ -89,3 +92,47 @@ console.log("Adding 7 to 10 is: " + add7(10));
 console.log("5 x 3 is: " + multiply(5, 3));
 console.log("tHiS capitalized is: " + capitalize("tHiS"));
 console.log("The last letter of alphabet is: " + lastLetter("alphabet"));
+
+// https://www.theodinproject.com/lessons/foundations-fundamentals-part-4
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
+
+console.log("\n\n====== Foundations Part 4 ======\n")
+for (let i = 10; i >= 0; i--) {
+    const output = document.querySelector('.output');
+    const para = document.createElement('p');
+    if (i == 10) {
+        para.textContent = `Countdown ${i}`;
+    } else if (i == 0) {
+        para.textContent = "Blast off!";
+    } else {
+        para.textContent = i;
+    }   
+    output.appendChild(para);
+}
+
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: ';
+
+// loop starts here
+for (p of people) {
+    if (p == "Phil" || p == "Lola") {
+        refused.textContent += `${p}, `;
+    } else {
+        admitted.textContent += `${p}, `;
+    }
+}
+
+if (refused.textContent.slice(-2) == ", ") {
+    refused.textContent = refused.textContent.slice(0, -2) + ".";
+}
+if (admitted.textContent.slice(-2) == ", ") {
+    admitted.textContent = admitted.textContent.slice(0, -2) + ".";
+}
+
+console.log(refused)
+console.log(admitted)

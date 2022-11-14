@@ -1,3 +1,4 @@
+// https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
 console.log("Hello world!");
 let name = "John";
 let admin = name;
@@ -59,7 +60,32 @@ actual = max - 13;
 percentage = actual/max;
 console.log(percentage);
 
+// https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
+
 console.log( '2' > 1 ); // true, string '2' becomes a number 2
 console.log( '01' == 1 ); // true, string '01' becomes a number 1
 console.log( true == 1 ); // true
 console.log( false == 0 ); // true
+
+// https://www.theodinproject.com/lessons/foundations-fundamentals-part-3
+
+function add7(x) {
+    return x+7;
+};
+
+function multiply(x, y) {
+    return x*y;
+};
+
+function capitalize(word) {
+    return word[0].toUpperCase() + word.slice(1);
+}
+
+function lastLetter(word) {
+    return word.slice(-1);
+}
+
+console.log("Adding 7 to 10 is: " + add7(10));
+console.log("5 x 3 is: " + multiply(5, 3));
+console.log("tHiS capitalized is: " + capitalize("tHiS"));
+console.log("The last letter of alphabet is: " + lastLetter("alphabet"));
